@@ -144,6 +144,7 @@ a.is-active {
         font-size: rem-calc(15vw);
     }
 }
+
 .scroll-down {
     position: absolute;
     top: 94%;
@@ -185,6 +186,24 @@ a.is-active {
     height: 25px;
     background: rgba(255,255,255,0.85);
     animation: animate 5s linear infinite;
+}
+@keyframes animate {
+    0% {
+        transform-origin: top;
+        transform: scaleY(0);
+    }
+    45% {
+        transform-origin: top;
+        transform: scaleY(1);
+    }
+    55% {
+        transform-origin: bottom;
+        transform: scaleY(1);
+    }
+    100% {
+        transform-origin: bottom;
+        transform: scaleY(0);
+    }
 }
 .grid-x {
     &.about_g {
@@ -461,7 +480,7 @@ $white: #fefefe;
     overflow: hidden;
     position: absolute;
     height: 100%;
-    width: 100%;
+    width: 100%;    
     padding: 40px 20px;
     top: 0;
     left: 0;
@@ -470,25 +489,31 @@ $white: #fefefe;
 }
 .backs {
     transform: rotateY(180deg);
-    background: #ffff;
+    background: #F8F8FF;
     &#logo_back {
         color: #ffff;
-        background: linear-gradient(-45deg,#28e998,#2e96db);
+        background: #001f3f;
         border: none;
     }
     &#web_back {
-        background: linear-gradient(-35deg,#c9252c,#681e72);
+        background: #005960;
         color: #ffff;
         border: none;
     }
     &#development_back {
-        background: linear-gradient(-35deg,#c900c9,#c23700);
+        background: #85144b;
         color: #ffff;
         border: none;
     }
 }
 .fronts {
     overflow: hidden;
+}
+
+.service_title{
+    position: relative;
+    white-space: nowrap;    
+    z-index: 3;
 }
 .faces.fronts:before {
     content: ' ';
@@ -497,25 +522,25 @@ $white: #fefefe;
     left: 0;
     width: 100%;
     height: 40%;
+    border-top: 2px solid #fac232;
     background: rgba(255,255,255,0.25);
-    z-index: 1;
     -webkit-transform: skewY(-5deg) scale(1.5);
 }
 #development_card {
-    background: #001f3f;
+    background: #2f2f2f;
     color: #ffff;
     border: none;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.23);
 }
 #web_card {
-    background: #85144b;
+    background: #2f2f2f;
     color: #ffff;
     border: none;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.23);
 }
 #logo_card {
     color: #ffff;
-    background: rgb(75,0,87);
+    background: #2f2f2f;
     border: none;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.23);
 }
