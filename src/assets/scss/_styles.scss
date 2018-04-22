@@ -13,7 +13,10 @@
     overflow: hidden;
     margin: 0;
     perspective: 1px;
-    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    
     overflow-x: hidden;
 }
 .row.portion.hero {
@@ -105,7 +108,8 @@
     box-sizing: content-box;
     width: 7px;
     height: 7px;
-    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
     border: 2px solid #000000;
     vertical-align: top;
     overflow: hidden;
@@ -149,7 +153,11 @@ a.is-active {
     position: absolute;
     top: 94%;
     left: 51%;
-    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    
+
     height: 50px;
     text-shadow: 0 0 80px rgba(255,255,255,0.85);
 }
@@ -159,7 +167,10 @@ a.is-active {
     width: 120px;
     padding-top: 120px;
     padding-right: 10px;
-    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    
     color: rgba(255,255,255,0.85);
     text-shadow: 0 0 80px rgba(255,255,255,0.85);
     font-family: sans-serif;
@@ -175,7 +186,10 @@ a.is-active {
     height: 10px;
     border-left: 2px solid rgba(255,255,255,0.85);
     border-bottom: 2px solid rgba(255,255,255,0.85);
-    transform: rotate(-45deg);
+
+    -webkit-transform: rotateY(-45deg);
+    -ms-transform: rotateY(-45deg);
+    -moz-transform: rotateY(-45deg);
 }
 .scroll-down:after {
     content: '';
@@ -189,20 +203,44 @@ a.is-active {
 }
 @keyframes animate {
     0% {
-        transform-origin: top;
-        transform: scaleY(0);
+        -webkit-transform-origin: top;
+        -webkit-transform: scaleY(0);
+
+        -ms-transform-origin: top;
+        -ms-transform: scaleY(0);
+
+        -moz-transform-origin: top;
+        -moz-transform: scaleY(0);
     }
     45% {
-        transform-origin: top;
-        transform: scaleY(1);
+       -webkit-transform-origin: top;
+        -webkit-transform: scaleY(1);
+
+        -moz-transform-origin: top;
+        -moz-transform: scaleY(1);
+
+        -ms-transform-origin: top;
+        -ms-transform: scaleY(1);
     }
     55% {
-        transform-origin: bottom;
-        transform: scaleY(1);
+        -webkit-transform-origin: bottom;
+        -webkit-transform: scaleY(1);
+
+        -ms-transform-origin: bottom;
+        -ms-transform: scaleY(1);
+
+        -moz-transform-origin: bottom;
+        -moz-transform: scaleY(1);
     }
     100% {
-        transform-origin: bottom;
-        transform: scaleY(0);
+        -webkit-transform-origin: bottom;
+        -webkit-transform: scaleY(0);
+
+        -moz-transform-origin: bottom;
+        -moz-transform: scaleY(0);
+
+        -ms-transform-origin: bottom;
+        -ms-transform: scaleY(0);
     }
 }
 .grid-x {
@@ -228,6 +266,9 @@ a.is-active {
     background: #fac232;
     z-index: -1;
     -webkit-transform: skewY(-5deg) scale(1);
+    -ms-transform: skewY(-5deg) scale(1);
+    -moz-transform: skewY(-5deg) scale(1);
+    
 }
 .wrapper {
     margin: 0 auto;
@@ -280,7 +321,8 @@ $white: #fefefe;
 .doc_orbit_slide {
     padding: 2rem 4rem;
     color: $white;
-    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;    
     height: 70vh;
     background: rgba(71,71,71,0.699);
 }
@@ -323,7 +365,8 @@ form {
 }
 .profile_img {
     @include horizontal-center;
-    border-radius: 50vh;
+    -webkit-border-radius: 50vh;
+    -moz-border-radius: 50vh;    
     position: relative;
     height: 20vh;
     width: 20vh;
@@ -335,7 +378,10 @@ form {
 }
 #about_container {
     color: white;
-    border-radius: 10px;
+   
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;    
+    
     width: 30%;
     position: relative;
     height: 75vh;
@@ -359,13 +405,18 @@ form {
     display: table-cell;
     @include absolute-center;
     width: 90%;
-    border-radius: 5px;
+   
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    
 }
 ul {
     list-style-type: none;
 }
 .orbit-container {
-    border-radius: 15px;
+    
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;    
     height: 80vh;
 }
 $white: #fefefe;
@@ -373,7 +424,11 @@ $white: #fefefe;
     padding: 2rem 4rem;
     color: $white;
     font-size: rem-calc(27);
-    border-radius: 15px;
+    
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    
+    
     height: 70vh;
     background: rgba(71,71,71,0.699);
 }
@@ -470,13 +525,21 @@ $white: #fefefe;
     }
 }
 .cards:hover .fronts {
-    transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    
+    
 }
 .cards:hover .backs {
-    transform: rotateY(0deg);
-}
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(-0deg);
+    -moz-transform: rotateY(0deg);}
 .faces {
-    border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;    
+    -webkit-border-radius: 25px;
+    
     overflow: hidden;
     position: absolute;
     height: 100%;
@@ -488,11 +551,13 @@ $white: #fefefe;
     transition: all 0.7s ease;
 }
 .backs {
-    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
     background: #F8F8FF;
     &#logo_back {
         color: #ffff;
-        background: #001f3f;
+        background: #9B2335;
         border: none;
     }
     &#web_back {
@@ -525,6 +590,10 @@ $white: #fefefe;
     border-top: 2px solid #fac232;
     background: rgba(255,255,255,0.25);
     -webkit-transform: skewY(-5deg) scale(1.5);
+    -moz-transform: skewY(-5deg) scale(1.5);
+    -ms-transform: skewY(-5deg) scale(1.5);
+    
+    
 }
 #development_card {
     background: #2f2f2f;
